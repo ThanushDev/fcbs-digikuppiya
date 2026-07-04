@@ -1,0 +1,163 @@
+/* style.css - NEON PLUS CODING THEME (Responsive) */
+
+/* --- GENERAL & BACKGROUND --- */
+body {
+    font-family: 'Consolas', 'Courier New', monospace;
+    background-color: #1e1e1e;
+    color: #cccccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px; /* Added padding for small screens */
+    box-sizing: border-box; /* Include padding/border in element's total width/height */
+}
+
+.container {
+    background-color: #252526;
+    padding: 30px 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid #007acc;
+}
+
+/* --- HEADINGS & TEXT --- */
+h1 {
+    text-align: center;
+    color: #00ccff;
+    margin-bottom: 5px;
+    text-shadow: 0 0 5px rgba(0, 204, 255, 0.6);
+}
+
+p {
+    text-align: center;
+    color: #999999;
+    margin-bottom: 25px;
+    font-size: 0.9em;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #50fa7b;
+}
+
+/* --- INPUT FIELDS --- */
+input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444444;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color: #333333;
+    color: #f8f8f2;
+    caret-color: #ff79c6;
+    font-size: 1em; /* Ensure font size is readable on mobile */
+}
+
+input[type="number"]:focus, select:focus {
+    border-color: #ff79c6;
+    box-shadow: 0 0 5px rgba(255, 121, 198, 0.5);
+    outline: none;
+}
+
+
+/* --- BUTTON --- */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff79c6;
+    color: #1e1e1e;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #ff92df;
+    box-shadow: 0 0 10px rgba(255, 121, 198, 0.7);
+}
+
+/* --- RESULT AREA (SUCCESS) --- */
+.result-area {
+    margin-top: 30px;
+    padding: 15px;
+    border: 2px solid #50fa7b;
+    background-color: #38423d;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #50fa7b;
+}
+
+/* List inside result area (for better structure) */
+.result-area ul {
+    text-align: left;
+    display: inline-block;
+    padding: 0;
+    margin: 10px auto 0;
+    list-style-type: '⚡';
+}
+
+.result-area li {
+    padding-left: 10px;
+    margin-bottom: 5px;
+    color: #cccccc;
+}
+
+.result-area li span {
+    color: #ff79c6;
+    font-weight: bold;
+}
+
+/* --- ERROR AREA --- */
+.error {
+    border-color: #ff5555 !important;
+    background-color: #4f3232 !important;
+    color: #ff5555 !important;
+}
+
+/* ------------------------------------------- */
+/* --- RESPONSIVE ADJUSTMENTS (MEDIA QUERIES) --- */
+/* ------------------------------------------- */
+
+/* Adjustments for devices smaller than 600px (Mobile-first approach is handled by default width: 100%) */
+@media (max-width: 600px) {
+    
+    /* Smaller container padding on mobile screens to save space */
+    .container {
+        padding: 20px 25px; 
+    }
+
+    /* Slightly smaller font size for the main header on mobile */
+    h1 {
+        font-size: 1.8em;
+    }
+
+    /* Adjust body padding for true edge-to-edge look on mobile */
+    body {
+        padding: 10px;
+        /* Ensure the container doesn't overflow the viewport */
+        min-height: 100dvh; /* Using dvh for better mobile viewport height handling */
+    }
+}
+
+/* Adjustments for large screens (e.g., wide desktop monitors) */
+@media (min-width: 1200px) {
+    /* Slightly increase the max width for extra large screens to prevent content from stretching too much */
+    .container {
+        max-width: 550px; 
+    }
+}

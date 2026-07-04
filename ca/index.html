@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA Marks Grade Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>CA Grade Target Calculator</h1>
+        <p>CA Marks are out of 35. Final Paper Marks are out of 65 (calculated from 100).</p>
+
+        <div class="input-group">
+            <label for="caMarks">Current CA Marks (out of 35):</label>
+            <input type="number" id="caMarks" min="0" max="35" placeholder="Enter CA marks" required>
+        </div>
+
+        <div class="input-group">
+            <label for="desiredGrade">Desired Final Grade:</label>
+            <select id="desiredGrade">
+                <option value="">-- Select Grade --</option>
+                <option value="A+">A+ (75% and above)</option>
+                <option value="A">A (70% - 74%)</option>
+                <option value="A-">A- (65% - 69%)</option>
+                <option value="B+">B+ (60% - 64%)</option>
+                <option value="B">B (55% - 59%)</option>
+                <option value="B-">B- (50% - 54%)</option>
+                <option value="C+">C+ (45% - 49%)</option>
+                <option value="C">C (40% - 44%)</option>
+                <option value="C-">C- (35% - 39%)</option>
+            </select>
+        </div>
+
+        <button onclick="calculateMarks()">Calculate Paper Mark</button>
+
+        <div class="result-area" id="result">
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
